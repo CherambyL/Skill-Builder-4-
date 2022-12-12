@@ -7,12 +7,10 @@
  * @author (you)
  * @version (a version number or a date)
  */
+
+
 public class Zeffit
 {
-
-
-    private final int Green = 1;
-    private final int Blue = 2;
     private final int Red = 3;
 
 
@@ -23,7 +21,6 @@ public class Zeffit
      */
     public Zeffit()
     {
-
         hitCount = 0;
     }
 
@@ -43,7 +40,6 @@ public class Zeffit
      */
     public boolean isHitFree()
     {
-
         return hitCount == 0;
     }
 
@@ -54,8 +50,13 @@ public class Zeffit
      */
     public boolean isGreen()
     {
-        return hitCount == Green;
+        if(hitCount == 1){
+            return true;
+        }else{
+            return false;
+        }
     }
+
 
     /**
      * Indicates whether this Zeffit has taken two hits
@@ -64,9 +65,13 @@ public class Zeffit
      */
     public boolean isBlue()
     {
-
-        return hitCount == Blue;
+        if(hitCount == 2){
+            return true;
+        }else{
+            return false;
+        }
     }
+
 
     /**
      * Indicates whether this Zeffit has taken three hits
@@ -75,7 +80,11 @@ public class Zeffit
      */
     public boolean isRed()
     {
-        return hitCount == Red;
+        if(hitCount == 3){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -85,8 +94,12 @@ public class Zeffit
      */
     public boolean isDead()
     {
-        // TODO: replace this line with your code
-        return hitCount > Red;
+        if(hitCount > 3){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
+
 
